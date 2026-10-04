@@ -164,23 +164,7 @@ Linux · Docker · Cloudflare · Git · GitHub
 
 <div align="center">
 
-<img src="./assets/footer.svg" width="100%" alt="DGKN@Labs — ASCII-Schriftzug in Gold auf Anthrazit. Code. Systeme. Neue Perspektiven." />
-
-<details>
-<summary>ASCII-Logo anzeigen & kopieren</summary>
-
-```text
-██████╗   ██████╗  ██╗  ██╗ ███╗   ██╗           ██╗       █████╗  ██████╗  ███████╗
-██╔══██╗ ██╔════╝  ██║ ██╔╝ ████╗  ██║           ██║      ██╔══██╗ ██╔══██╗ ██╔════╝
-██║  ██║ ██║  ███╗ █████╔╝  ██╔██╗ ██║     @     ██║      ███████║ ██████╔╝ ███████╗
-██║  ██║ ██║   ██║ ██╔═██╗  ██║╚██╗██║           ██║      ██╔══██║ ██╔══██╗ ╚════██║
-██████╔╝ ╚██████╔╝ ██║  ██╗ ██║ ╚████║           ███████╗ ██║  ██║ ██████╔╝ ███████║
-╚═════╝   ╚═════╝  ╚═╝  ╚═╝ ╚═╝  ╚═══╝           ╚══════╝ ╚═╝  ╚═╝ ╚═════╝  ╚══════╝
-
-                       DGKN@Labs · Independent Digital Lab
-```
-
-</details>
+<img src="https://raw.githubusercontent.com/dogenc/dogenc/454d61733b169dccdac208e10d80c1e47627e5ab/assets/footer.svg" width="100%" alt="DGKN@Labs — goldener Schriftzug auf Anthrazit. Code. Systeme. Neue Perspektiven." />
 
 <br />
 
