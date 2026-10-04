@@ -161,16 +161,30 @@ Linux · Docker · Cloudflare · Git · GitHub
 
 <div align="center">
 
-<pre>
- ██████╗  ██████╗ ██╗  ██╗███╗   ██╗
- ██╔══██╗██╔════╝ ██║ ██╔╝████╗  ██║
- ██║  ██║██║  ███╗█████╔╝ ██╔██╗ ██║
- ██║  ██║██║   ██║██╔═██╗ ██║╚██╗██║
- ██████╔╝╚██████╔╝██║  ██╗██║ ╚████║
- ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝
-                 @Labs
-</pre>
+<img src="./assets/footer.svg" width="100%" alt="DGKN@Labs — großes Blockschrift-Logo in Gold auf Anthrazit. Build · Explore · Refine." />
 
-**Von der Idee zum eigenen System.**
+<details>
+<summary>ASCII-Logo anzeigen & kopieren</summary>
+
+```text
+████████      ████████  ██      ██  ██      ██    ██████    ██            ██████    ████████      ████████
+██      ██  ██          ██    ██    ████    ██  ██      ██  ██          ██      ██  ██      ██  ██        
+██      ██  ██          ██  ██      ████    ██  ██  ██████  ██          ██      ██  ██      ██  ██        
+██      ██  ██  ██████  ████        ██  ██  ██  ██  ██  ██  ██          ██████████  ████████      ██████  
+██      ██  ██      ██  ██  ██      ██    ████  ██  ██████  ██          ██      ██  ██      ██          ██
+██      ██  ██      ██  ██    ██    ██    ████  ██          ██          ██      ██  ██      ██          ██
+████████      ████████  ██      ██  ██      ██    ████████  ██████████  ██      ██  ████████    ████████  
+
+                         I N D E P E N D E N T   D I G I T A L   L A B
+                                     B U I L D  ·  E X P L O R E  ·  R E F I N E
+```
+
+</details>
+
+<br />
+
+[**Projekte**](https://github.com/dogenc?tab=repositories) &nbsp; · &nbsp; [**Instagram**](https://www.instagram.com/dgkn_labs/) &nbsp; · &nbsp; [**Zurück nach oben ↑**](#)
+
+<sub>DGKN@Labs · Von der Idee zum eigenen System.</sub>
 
 </div>
