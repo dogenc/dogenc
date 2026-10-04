@@ -9,7 +9,7 @@
 Ich entwickle unter **DGKN@Labs** eigene Werkzeuge, digitale Experimente und interaktive Lernwelten.  
 Mich interessiert, wie Technik funktioniert — und was sich daraus bauen lässt.
 
-[Projekte entdecken](https://github.com/dogenc?tab=repositories) &nbsp; · &nbsp; [Instagram](https://www.instagram.com/dgkn_labs/)
+[**Projektgalerie**](#aus-dem-lab) &nbsp; / &nbsp; [**Alle Projekte**](#alle-öffentlichen-projekte) &nbsp; / &nbsp; [**Tech-Stack**](#tech-stack) &nbsp; / &nbsp; [**Instagram**](https://www.instagram.com/dgkn_labs/)
 
 </div>
 
@@ -94,22 +94,61 @@ Sechs Einblicke in meine Projekte — mit Aufnahmen aus den jeweiligen Repositor
 
 [**Weitere Entwicklungen auf GitHub verfolgen →**](https://github.com/dogenc?tab=repositories)
 
-## Mein Werkzeugkasten
+## Tech-Stack
 
-Technologien, mit denen ich arbeite und experimentiere:
+Technologien, mit denen ich arbeite, Projekte umsetze und experimentiere.
 
-![Rust](https://img.shields.io/badge/Rust-111820?style=for-the-badge&logo=rust&logoColor=D9B66D)
-![C++](https://img.shields.io/badge/C%2B%2B-111820?style=for-the-badge&logo=cplusplus&logoColor=D9B66D)
-![Qt](https://img.shields.io/badge/Qt-111820?style=for-the-badge&logo=qt&logoColor=D9B66D)
-![Python](https://img.shields.io/badge/Python-111820?style=for-the-badge&logo=python&logoColor=D9B66D)
-![TypeScript](https://img.shields.io/badge/TypeScript-111820?style=for-the-badge&logo=typescript&logoColor=D9B66D)
-![JavaScript](https://img.shields.io/badge/JavaScript-111820?style=for-the-badge&logo=javascript&logoColor=D9B66D)
-![React](https://img.shields.io/badge/React-111820?style=for-the-badge&logo=react&logoColor=D9B66D)
-![Three.js](https://img.shields.io/badge/Three.js-111820?style=for-the-badge&logo=threedotjs&logoColor=D9B66D)
-![Linux](https://img.shields.io/badge/Linux-111820?style=for-the-badge&logo=linux&logoColor=D9B66D)
-![Docker](https://img.shields.io/badge/Docker-111820?style=for-the-badge&logo=docker&logoColor=D9B66D)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-111820?style=for-the-badge&logo=cloudflare&logoColor=D9B66D)
-![Git](https://img.shields.io/badge/Git-111820?style=for-the-badge&logo=git&logoColor=D9B66D)
+### Sprachen & Web
+
+<p>
+  <img src="https://skillicons.dev/icons?i=java&amp;theme=dark" width="48" height="48" alt="Java" title="Java" />
+  <img src="https://skillicons.dev/icons?i=html&amp;theme=dark" width="48" height="48" alt="HTML5" title="HTML5" />
+  <img src="https://skillicons.dev/icons?i=css&amp;theme=dark" width="48" height="48" alt="CSS3" title="CSS3" />
+  <img src="https://skillicons.dev/icons?i=c&amp;theme=dark" width="48" height="48" alt="C" title="C" />
+  <img src="https://skillicons.dev/icons?i=cpp&amp;theme=dark" width="48" height="48" alt="C++" title="C++" />
+  <img src="https://skillicons.dev/icons?i=rust&amp;theme=dark" width="48" height="48" alt="Rust" title="Rust" />
+  <img src="https://skillicons.dev/icons?i=python&amp;theme=dark" width="48" height="48" alt="Python" title="Python" />
+  <img src="https://skillicons.dev/icons?i=js&amp;theme=dark" width="48" height="48" alt="JavaScript" title="JavaScript" />
+  <img src="https://skillicons.dev/icons?i=ts&amp;theme=dark" width="48" height="48" alt="TypeScript" title="TypeScript" />
+</p>
+
+Java · HTML5 · CSS3 · C · C++ · Rust · Python · JavaScript · TypeScript
+
+### Frameworks & Oberflächen
+
+<p>
+  <img src="https://skillicons.dev/icons?i=react&amp;theme=dark" width="48" height="48" alt="React" title="React" />
+  <img src="https://skillicons.dev/icons?i=threejs&amp;theme=dark" width="48" height="48" alt="Three.js" title="Three.js" />
+  <img src="https://skillicons.dev/icons?i=qt&amp;theme=dark" width="48" height="48" alt="Qt" title="Qt" />
+  <img src="https://skillicons.dev/icons?i=electron&amp;theme=dark" width="48" height="48" alt="Electron" title="Electron" />
+</p>
+
+React · Three.js · Qt · Electron
+
+### Systeme & Entwicklung
+
+<p>
+  <img src="https://skillicons.dev/icons?i=linux&amp;theme=dark" width="48" height="48" alt="Linux" title="Linux" />
+  <img src="https://skillicons.dev/icons?i=docker&amp;theme=dark" width="48" height="48" alt="Docker" title="Docker" />
+  <img src="https://skillicons.dev/icons?i=cloudflare&amp;theme=dark" width="48" height="48" alt="Cloudflare" title="Cloudflare" />
+  <img src="https://skillicons.dev/icons?i=git&amp;theme=dark" width="48" height="48" alt="Git" title="Git" />
+  <img src="https://skillicons.dev/icons?i=github&amp;theme=dark" width="48" height="48" alt="GitHub" title="GitHub" />
+</p>
+
+Linux · Docker · Cloudflare · Git · GitHub
+
+<sub>Logos: <a href="https://github.com/tandpfun/skill-icons">Skill Icons</a></sub>
+
+## Direkt zum passenden Projekt
+
+| Du möchtest … | Hier starten |
+|---|---|
+| eine Datei auf Auffälligkeiten untersuchen | [SENTINEL-F](https://github.com/dogenc/SENTINEL-F) |
+| lokale KI-Modelle besser verstehen | [GGUF Studio](https://github.com/dogenc/gguf-studio) |
+| verschlüsselte Container verwalten | [Crypto Suite](https://github.com/dogenc/dgknCryptoSuite) |
+| Körper, Zellen oder Erde in 3D erkunden | [CORPUS](https://github.com/dogenc/CORPUS-Anatomieatlas) · [CELLULA](https://github.com/dogenc/CELLULA) · [TERRA](https://github.com/dogenc/TERRA) |
+| Windows-Programme und Verbindungen prüfen | [Inspector](https://github.com/dogenc/DGKN-Labs-Inspector) |
+| Windows aufräumen oder Entwicklerpfade finden | [System Utility](https://github.com/dogenc/windows-system-utility) |
 
 ## Woran ich gern arbeite
 
