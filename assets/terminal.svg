@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="370" viewBox="0 0 1200 370" role="img" aria-label="DGKN Labs Profil: KI, Automatisierung, Software, Sicherheit und interaktive 3D-Lernwelten">
+<rect x="1" y="1" width="1198" height="368" rx="16" fill="#0d1117" stroke="#293344"/><path d="M1 49H1199" stroke="#293344"/>
+<circle cx="27" cy="25" r="5" fill="#df7369"/><circle cx="47" cy="25" r="5" fill="#d9b66d"/><circle cx="67" cy="25" r="5" fill="#81b59d"/>
+<g font-family="monospace" font-size="17"><text x="99" y="31" fill="#76879b" font-size="13">dogenc@labs ~ /about</text>
+<text x="36" y="94" fill="#d9b66d">$ cat philosophy.txt</text><text x="36" y="134" fill="#e6edf3">Ideen bauen. Technik verstehen.</text><text x="36" y="164" fill="#e6edf3">Wissen erlebbar machen.</text>
+<text x="36" y="223" fill="#d9b66d">$ ls interests/</text><text x="36" y="263" fill="#9eafc4">ai/   automation/   security/</text><text x="36" y="293" fill="#9eafc4">software/   hardware/   3d/</text>
+<path d="M605 79V322" stroke="#293344"/>
+<text x="645" y="96" fill="#76879b" font-size="13" letter-spacing="2">EXPERIMENT → PROTOTYPE → PRODUCT</text>
+<text x="645" y="149" fill="#d9b66d">01</text><text x="691" y="149" fill="#e6edf3">Werkzeuge mit echtem Nutzen</text>
+<text x="645" y="198" fill="#d9b66d">02</text><text x="691" y="198" fill="#e6edf3">Details, die den Unterschied machen</text>
+<text x="645" y="247" fill="#d9b66d">03</text><text x="691" y="247" fill="#e6edf3">Neugier als Antrieb</text>
+<text x="645" y="309" fill="#76879b" font-size="14">Always learning. Always building.</text>
+<text x="36" y="340" fill="#d9b66d">$</text><rect x="58" y="325" width="10" height="18" fill="#d9b66d"><animate attributeName="opacity" values="1;1;0;0" dur="1.3s" repeatCount="indefinite"/></rect></g></svg>
