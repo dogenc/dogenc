@@ -164,22 +164,20 @@ Linux · Docker · Cloudflare · Git · GitHub
 
 <div align="center">
 
-<img src="./assets/footer.svg" width="100%" alt="DGKN@Labs — großes Blockschrift-Logo in Gold auf Anthrazit. Build · Explore · Refine." />
+<img src="./assets/footer.svg" width="100%" alt="DGKN@Labs — ASCII-Schriftzug in Gold auf Anthrazit. Code. Systeme. Neue Perspektiven." />
 
 <details>
 <summary>ASCII-Logo anzeigen & kopieren</summary>
 
 ```text
-████████      ████████  ██      ██  ██      ██    ██████    ██            ██████    ████████      ████████
-██      ██  ██          ██    ██    ████    ██  ██      ██  ██          ██      ██  ██      ██  ██        
-██      ██  ██          ██  ██      ████    ██  ██  ██████  ██          ██      ██  ██      ██  ██        
-██      ██  ██  ██████  ████        ██  ██  ██  ██  ██  ██  ██          ██████████  ████████      ██████  
-██      ██  ██      ██  ██  ██      ██    ████  ██  ██████  ██          ██      ██  ██      ██          ██
-██      ██  ██      ██  ██    ██    ██    ████  ██          ██          ██      ██  ██      ██          ██
-████████      ████████  ██      ██  ██      ██    ████████  ██████████  ██      ██  ████████    ████████  
+██████╗   ██████╗  ██╗  ██╗ ███╗   ██╗           ██╗       █████╗  ██████╗  ███████╗
+██╔══██╗ ██╔════╝  ██║ ██╔╝ ████╗  ██║           ██║      ██╔══██╗ ██╔══██╗ ██╔════╝
+██║  ██║ ██║  ███╗ █████╔╝  ██╔██╗ ██║     @     ██║      ███████║ ██████╔╝ ███████╗
+██║  ██║ ██║   ██║ ██╔═██╗  ██║╚██╗██║           ██║      ██╔══██║ ██╔══██╗ ╚════██║
+██████╔╝ ╚██████╔╝ ██║  ██╗ ██║ ╚████║           ███████╗ ██║  ██║ ██████╔╝ ███████║
+╚═════╝   ╚═════╝  ╚═╝  ╚═╝ ╚═╝  ╚═══╝           ╚══════╝ ╚═╝  ╚═╝ ╚═════╝  ╚══════╝
 
-                         I N D E P E N D E N T   D I G I T A L   L A B
-                                     B U I L D  ·  E X P L O R E  ·  R E F I N E
+                       DGKN@Labs · Independent Digital Lab
 ```
 
 </details>
