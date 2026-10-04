@@ -76,19 +76,22 @@ Sechs Einblicke in meine Projekte — mit Aufnahmen aus den jeweiligen Repositor
 
 ## Alle öffentlichen Projekte
 
-| Projekt | Bereich | Worum es geht |
-|---|---|---|
-| [**SENTINEL-F**](https://github.com/dogenc/SENTINEL-F) | Sicherheit & Analyse | Dateiforensik, Erkennung, Zusammenhänge und Berichte |
-| [**gguf-studio**](https://github.com/dogenc/gguf-studio) | KI & Modelle | GGUF-Analyse, Tensor-Browser und Ollama-Werkzeuge |
-| [**dgknCryptoSuite**](https://github.com/dogenc/dgknCryptoSuite) | Sicherheit & Kryptografie | Verschlüsselte Container für Windows |
-| [**CORPUS-Anatomieatlas**](https://github.com/dogenc/CORPUS-Anatomieatlas) | Wissen & 3D | Interaktiver Anatomieatlas auf Deutsch und Latein |
-| [**CELLULA**](https://github.com/dogenc/CELLULA) | Wissen & 3D | Zellbiologie, biologische Abläufe und Moleküle |
-| [**TERRA**](https://github.com/dogenc/TERRA) | Wissen & 3D | Interaktiver Erdatlas und geologische Lernreisen |
-| [**DGKN-Labs-Inspector**](https://github.com/dogenc/DGKN-Labs-Inspector) | Windows & Analyse | Programme, Signaturen und Netzwerkverbindungen untersuchen |
-| [**windows-system-utility**](https://github.com/dogenc/windows-system-utility) | Windows & Werkzeuge | Temp-Cleaner, Entwicklerpfade und Systeminformationen |
-| [**passwordgenerator**](https://github.com/dogenc/passwordgenerator) | Sicherheit & Werkzeuge | Passwörter erzeugen und Passwortstärke einschätzen |
-| [**bitcoin-toolbox**](https://github.com/dogenc/bitcoin-toolbox) | Bitcoin & Werkzeuge | Adressen, Transaktionen und HD-Wallet-Ableitungen untersuchen |
-| [**3D-Globe-HTML---Test-01**](https://github.com/dogenc/3D-Globe-HTML---Test-01) | Experimente & 3D | HTML-Globus-Testprojekt |
+| Projekt | Bereich | Worum es geht | Repo erstellt | Erstes Release¹ |
+|---|---|---|:---:|:---:|
+| [**SENTINEL-F**](https://github.com/dogenc/SENTINEL-F) | Sicherheit & Analyse | Dateiforensik, Erkennung, Zusammenhänge und Berichte | 29.09.2026 | [29.09.2026](https://github.com/dogenc/SENTINEL-F/releases/tag/v1.0.0) |
+| [**gguf-studio**](https://github.com/dogenc/gguf-studio) | KI & Modelle | GGUF-Analyse, Tensor-Browser und Ollama-Werkzeuge | 23.07.2026 | [25.07.2026](https://github.com/dogenc/gguf-studio/releases/tag/v0.1.0) |
+| [**dgknCryptoSuite**](https://github.com/dogenc/dgknCryptoSuite) | Sicherheit & Kryptografie | Verschlüsselte Container für Windows | 07.06.2026 | [14.06.2026](https://github.com/dogenc/dgknCryptoSuite/releases/tag/7.0.0) |
+| [**CORPUS-Anatomieatlas**](https://github.com/dogenc/CORPUS-Anatomieatlas) | Wissen & 3D | Interaktiver Anatomieatlas auf Deutsch und Latein | 02.10.2026 | [04.10.2026](https://github.com/dogenc/CORPUS-Anatomieatlas/releases/tag/v1.1.0) |
+| [**CELLULA**](https://github.com/dogenc/CELLULA) | Wissen & 3D | Zellbiologie, biologische Abläufe und Moleküle | 02.10.2026 | [04.10.2026](https://github.com/dogenc/CELLULA/releases/tag/v2.1.0) |
+| [**TERRA**](https://github.com/dogenc/TERRA) | Wissen & 3D | Interaktiver Erdatlas und geologische Lernreisen | 03.10.2026 | [04.10.2026](https://github.com/dogenc/TERRA/releases/tag/v1.0.0) |
+| [**DGKN-Labs-Inspector**](https://github.com/dogenc/DGKN-Labs-Inspector) | Windows & Analyse | Programme, Signaturen und Netzwerkverbindungen untersuchen | 29.09.2026 | [29.09.2026](https://github.com/dogenc/DGKN-Labs-Inspector/releases/tag/v2.0.0) |
+| [**windows-system-utility**](https://github.com/dogenc/windows-system-utility) | Windows & Werkzeuge | Temp-Cleaner, Entwicklerpfade und Systeminformationen | 29.08.2026 | [31.08.2026](https://github.com/dogenc/windows-system-utility/releases/tag/v1.0.0) |
+| [**passwordgenerator**](https://github.com/dogenc/passwordgenerator) | Sicherheit & Werkzeuge | Passwörter erzeugen und Passwortstärke einschätzen | 09.01.2026 | [09.01.2026](https://github.com/dogenc/passwordgenerator/releases/tag/v1.0.0) |
+| [**bitcoin-toolbox**](https://github.com/dogenc/bitcoin-toolbox) | Bitcoin & Werkzeuge | Adressen, Transaktionen und HD-Wallet-Ableitungen untersuchen | 02.11.2025 | Kein Release |
+| [**3D-Globe-HTML---Test-01**](https://github.com/dogenc/3D-Globe-HTML---Test-01) | Experimente & 3D | HTML-Globus-Testprojekt | 02.04.2026 | Kein Release |
+
+
+<sub>¹ Veröffentlichungsdatum des frühesten aktuell verfügbaren GitHub-Releases; das Datum verlinkt direkt auf die Veröffentlichung. „Repo erstellt“ bezeichnet die Anlage des Repositories, nicht einen späteren Wechsel von privat zu öffentlich. Datumsangaben in Europe/Berlin.</sub>
 
 <sub>Öffentliche Repository-Übersicht · Stand: 4. Oktober 2026</sub>
 
