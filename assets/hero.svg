@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-label="DGKN@Labs — Code. Systeme. Neue Perspektiven.">
+<defs><linearGradient id="bg"><stop stop-color="#090c12"/><stop offset="1" stop-color="#17202c"/></linearGradient><linearGradient id="gold"><stop stop-color="#f4d997"/><stop offset="1" stop-color="#b88a42"/></linearGradient><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".035"/></pattern></defs>
+<rect width="1200" height="390" rx="18" fill="url(#bg)"/><rect width="1200" height="390" rx="18" fill="url(#grid)"/>
+<path d="M48 45H1152" stroke="#cba55e" stroke-opacity=".35"/>
+<g font-family="monospace"><text x="50" y="78" fill="#cba55e" font-size="13" letter-spacing="4">INDEPENDENT DIGITAL LAB</text>
+<text x="46" y="181" fill="url(#gold)" font-size="83" font-weight="bold" letter-spacing="-5">DGKN@Labs</text>
+<text x="50" y="236" fill="#f0f3f7" font-size="24">Code. Systeme. Neue Perspektiven.</text>
+<text x="50" y="277" fill="#9ba9bb" font-size="16">KI · SOFTWARE · CYBERSECURITY · 3D</text>
+<text x="50" y="347" fill="#65758b" font-size="12" letter-spacing="2">DOGENC / BUILD · EXPLORE · REFINE</text></g>
+<g transform="translate(1000 195)" fill="none" stroke="#d9b66d"><circle r="120" opacity=".12"/><circle r="95" opacity=".24"/><ellipse rx="95" ry="35" transform="rotate(-35)" opacity=".65"/><ellipse rx="95" ry="35" transform="rotate(35)" opacity=".65"/><ellipse rx="35" ry="95" opacity=".65"/><circle r="9" fill="#eed39a" stroke="none"/><g><circle cx="95" r="5" fill="#f4d997" stroke="none"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="18s" repeatCount="indefinite"/></g></g>
+</svg>
