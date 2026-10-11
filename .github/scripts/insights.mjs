@@ -37,7 +37,7 @@ async function fetchData() {
         contributionsCollection {
           totalCommitContributions totalPullRequestContributions
           totalRepositoriesWithContributedCommits totalIssueContributions
-          contributionCalendar { weeks { contributionDays { weekday contributionCount } } }
+          contributionCalendar { weeks { contributionDays { date weekday contributionCount } } }
         }
       }
     }`,
@@ -68,8 +68,14 @@ async function fetchData() {
     cursor = r.pageInfo.hasNextPage ? r.pageInfo.endCursor : null;
   } while (cursor);
 
-  // Commit-Zeitpunkte der letzten 12 Monate (nur Uhrzeit wird ausgewertet).
-  const commitTimes = [];
+  // Commits der letzten 12 Monate (ausgewertet werden nur Zeitpunkte).
+  // Squash-Merges fassen viele Commits zu einem zusammen – die Einzelcommits
+  // stecken aber noch im Pull Request und werden von dort ergänzt.
+  const isBot = (n) => /\[bot\]|dependabot/i.test(`${n.author?.user?.login || ""} ${n.author?.name || ""}`);
+  const key = (n) => `${n.authoredDate}|${n.messageHeadline}`;
+  const mainCommits = [];
+  const prCommits = new Map();
+  const mergeOids = new Set();
   let skippedBots = 0;
   for (const repo of repos) {
     if (!repo.defaultBranchRef) continue;
@@ -81,7 +87,7 @@ async function fetchData() {
             defaultBranchRef { target { ... on Commit {
               history(first: 100, after: $after, since: $since) {
                 pageInfo { hasNextPage endCursor }
-                nodes { authoredDate author { name user { login } } }
+                nodes { oid authoredDate messageHeadline author { name user { login } } }
               }
             } } }
           }
@@ -92,15 +98,59 @@ async function fetchData() {
       if (!history) break;
       // Eigene Repos: alle Commits zählen, nur Bots (z. B. diese Action) nicht.
       for (const n of history.nodes) {
-        const who = `${n.author?.user?.login || ""} ${n.author?.name || ""}`;
-        if (/\[bot\]|dependabot/i.test(who)) skippedBots++;
-        else commitTimes.push(n.authoredDate);
+        if (isBot(n)) skippedBots++;
+        else mainCommits.push(n);
       }
       after = history.pageInfo.hasNextPage ? history.pageInfo.endCursor : null;
     } while (after);
+
+    let prAfter = null;
+    do {
+      const page = await gql(
+        `query($owner: String!, $name: String!, $after: String) {
+          repository(owner: $owner, name: $name) {
+            pullRequests(first: 25, after: $after, orderBy: { field: UPDATED_AT, direction: DESC }) {
+              pageInfo { hasNextPage endCursor }
+              nodes {
+                updatedAt
+                mergeCommit { oid }
+                commits(first: 250) { nodes { commit { authoredDate messageHeadline author { name user { login } } } } }
+              }
+            }
+          }
+        }`,
+        { owner: LOGIN, name: repo.name, after: prAfter },
+      );
+      const prs = page.repository?.pullRequests;
+      if (!prs) break;
+      for (const pr of prs.nodes) {
+        if (pr.mergeCommit) mergeOids.add(pr.mergeCommit.oid);
+        for (const { commit } of pr.commits.nodes)
+          if (commit.authoredDate >= since && !isBot(commit)) prCommits.set(key(commit), commit);
+      }
+      const older = prs.nodes.length && prs.nodes.at(-1).updatedAt < since;
+      prAfter = prs.pageInfo.hasNextPage && !older ? prs.pageInfo.endCursor : null;
+    } while (prAfter);
   }
 
-  console.log(`Commits für Tageszeit: ${commitTimes.length} (Bots ignoriert: ${skippedBots})`);
+  // Squash-/Merge-Commits ersetzen durch die Einzelcommits aus den PRs (ohne Doppelte).
+  const mainKeys = new Set(mainCommits.map(key));
+  const removed = mainCommits.filter((n) => mergeOids.has(n.oid) && !prCommits.has(key(n)));
+  const added = [...prCommits.values()].filter((n) => !mainKeys.has(key(n)));
+  const commitTimes = [
+    ...mainCommits.filter((n) => !removed.includes(n)).map((n) => n.authoredDate),
+    ...added.map((n) => n.authoredDate),
+  ];
+  console.log(
+    `Commits: ${commitTimes.length} (Branch ${mainCommits.length}, aus PRs ergänzt ${added.length}, Squash/Merge entfernt ${removed.length}, Bots ignoriert ${skippedBots})`,
+  );
+
+  // Tagesweise Korrektur für die Heatmap (activity.mjs liest sie über ACTIVITY_EXTRA).
+  const dayFmt = new Intl.DateTimeFormat("en-CA", { timeZone: TZ });
+  const extraPerDay = {};
+  for (const n of added) extraPerDay[dayFmt.format(new Date(n.authoredDate))] = (extraPerDay[dayFmt.format(new Date(n.authoredDate))] || 0) + 1;
+  for (const n of removed) extraPerDay[dayFmt.format(new Date(n.authoredDate))] = (extraPerDay[dayFmt.format(new Date(n.authoredDate))] || 0) - 1;
+  if (process.env.ACTIVITY_EXTRA) writeFileSync(process.env.ACTIVITY_EXTRA, JSON.stringify(extraPerDay));
 
   const languages = new Map();
   for (const repo of repos)
@@ -112,7 +162,8 @@ async function fetchData() {
 
   const cc = user.contributionsCollection;
   const perWeekday = Array(7).fill(0);
-  for (const w of cc.contributionCalendar.weeks) for (const d of w.contributionDays) perWeekday[d.weekday] += d.contributionCount;
+  for (const w of cc.contributionCalendar.weeks)
+    for (const d of w.contributionDays) perWeekday[d.weekday] += Math.max(0, d.contributionCount + (extraPerDay[d.date] || 0));
 
   const hourFmt = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", hourCycle: "h23", timeZone: TZ });
   const perHour = Array(24).fill(0);
@@ -124,7 +175,7 @@ async function fetchData() {
     perHour,
     perWeekday,
     totals: {
-      commits: cc.totalCommitContributions,
+      commits: Math.max(0, cc.totalCommitContributions + added.length - removed.length),
       prs: cc.totalPullRequestContributions,
       repos: cc.totalRepositoriesWithContributedCommits,
       issues: cc.totalIssueContributions,

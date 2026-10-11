@@ -4,7 +4,7 @@
 //   ACTIVITY_TOKEN=<PAT> node .github/scripts/activity.mjs [ausgabe.svg]
 //   node .github/scripts/activity.mjs --demo [ausgabe.svg]   (Zufallsdaten, nur zur Vorschau)
 
-import { writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 
 const LOGIN = process.env.ACTIVITY_LOGIN || "dogenc";
 const args = process.argv.slice(2);
@@ -158,6 +158,21 @@ ${legendSvg}
 `;
 }
 
-const weeks = demo ? demoWeeks() : await fetchWeeks();
+// Einzelcommits aus squash-gemergten PRs ergänzen (von insights.mjs berechnet).
+function applyExtra(weeks) {
+  const file = process.env.ACTIVITY_EXTRA;
+  if (!file || !existsSync(file)) return weeks;
+  const extra = JSON.parse(readFileSync(file, "utf8"));
+  const days = weeks.flat();
+  for (const d of days) d.count = Math.max(0, d.count + (extra[d.date] || 0));
+  // Stufen wie bei GitHub über Quartile der aktiven Tage neu bestimmen.
+  const sorted = days.map((d) => d.count).filter((c) => c > 0).sort((a, b) => a - b);
+  const q = (p) => sorted[Math.floor((sorted.length - 1) * p)] ?? 0;
+  const limits = [q(0.25), q(0.5), q(0.75)];
+  for (const d of days) d.level = d.count === 0 ? 0 : 1 + limits.filter((l) => d.count > l).length;
+  return weeks;
+}
+
+const weeks = demo ? demoWeeks() : applyExtra(await fetchWeeks());
 writeFileSync(out, render(weeks));
 console.log(`${out} geschrieben (${weeks.flat().length} Tage).`);

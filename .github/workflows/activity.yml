@@ -28,18 +28,21 @@ jobs:
         with:
           node-version: 22
 
-      - name: Aktivitätsgrafik erzeugen
-        env:
-          # Persönlicher Token (classic, Scopes: repo + read:user) – nur so zählen private Repos mit.
-          ACTIVITY_TOKEN: ${{ secrets.ACTIVITY_TOKEN }}
-        run: node .github/scripts/activity.mjs assets/activity.svg
-
       - name: Sprachen und Rhythmus erzeugen
         # Ein Fehler hier soll die Heatmap nicht blockieren.
         continue-on-error: true
         env:
+          # Persönlicher Token (classic, Scopes: repo + read:user) – nur so zählen private Repos mit.
           ACTIVITY_TOKEN: ${{ secrets.ACTIVITY_TOKEN }}
+          ACTIVITY_EXTRA: ${{ runner.temp }}/extra-commits.json
         run: node .github/scripts/insights.mjs assets
+
+      - name: Aktivitätsgrafik erzeugen
+        env:
+          ACTIVITY_TOKEN: ${{ secrets.ACTIVITY_TOKEN }}
+          # Einzelcommits aus squash-gemergten PRs (aus dem Schritt davor).
+          ACTIVITY_EXTRA: ${{ runner.temp }}/extra-commits.json
+        run: node .github/scripts/activity.mjs assets/activity.svg
 
       - name: Nur bei Änderungen committen
         run: |
