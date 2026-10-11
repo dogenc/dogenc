@@ -34,7 +34,6 @@ async function fetchData() {
   const base = await gql(
     `query($login: String!) {
       user(login: $login) {
-        id
         contributionsCollection {
           totalCommitContributions totalPullRequestContributions
           totalPullRequestReviewContributions totalIssueContributions
@@ -71,29 +70,37 @@ async function fetchData() {
 
   // Commit-Zeitpunkte der letzten 12 Monate (nur Uhrzeit wird ausgewertet).
   const commitTimes = [];
+  let skippedBots = 0;
   for (const repo of repos) {
     if (!repo.defaultBranchRef) continue;
     let after = null;
     do {
       const page = await gql(
-        `query($owner: String!, $name: String!, $author: ID!, $since: GitTimestamp!, $after: String) {
+        `query($owner: String!, $name: String!, $since: GitTimestamp!, $after: String) {
           repository(owner: $owner, name: $name) {
             defaultBranchRef { target { ... on Commit {
-              history(first: 100, after: $after, since: $since, author: { id: $author }) {
+              history(first: 100, after: $after, since: $since) {
                 pageInfo { hasNextPage endCursor }
-                nodes { authoredDate }
+                nodes { authoredDate author { name user { login } } }
               }
             } } }
           }
         }`,
-        { owner: LOGIN, name: repo.name, author: user.id, since, after },
+        { owner: LOGIN, name: repo.name, since, after },
       );
       const history = page.repository?.defaultBranchRef?.target?.history;
       if (!history) break;
-      commitTimes.push(...history.nodes.map((n) => n.authoredDate));
+      // Eigene Repos: alle Commits zählen, nur Bots (z. B. diese Action) nicht.
+      for (const n of history.nodes) {
+        const who = `${n.author?.user?.login || ""} ${n.author?.name || ""}`;
+        if (/\[bot\]|dependabot/i.test(who)) skippedBots++;
+        else commitTimes.push(n.authoredDate);
+      }
       after = history.pageInfo.hasNextPage ? history.pageInfo.endCursor : null;
     } while (after);
   }
+
+  console.log(`Commits für Tageszeit: ${commitTimes.length} (Bots ignoriert: ${skippedBots})`);
 
   const languages = new Map();
   for (const repo of repos)
