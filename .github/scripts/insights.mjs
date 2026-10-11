@@ -36,7 +36,7 @@ async function fetchData() {
       user(login: $login) {
         contributionsCollection {
           totalCommitContributions totalPullRequestContributions
-          totalPullRequestReviewContributions totalIssueContributions
+          totalRepositoriesWithContributedCommits totalIssueContributions
           contributionCalendar { weeks { contributionDays { weekday contributionCount } } }
         }
       }
@@ -126,7 +126,7 @@ async function fetchData() {
     totals: {
       commits: cc.totalCommitContributions,
       prs: cc.totalPullRequestContributions,
-      reviews: cc.totalPullRequestReviewContributions,
+      repos: cc.totalRepositoriesWithContributedCommits,
       issues: cc.totalIssueContributions,
     },
   };
@@ -142,7 +142,7 @@ function demoData() {
     ].map(([name, color], i) => ({ name, color, size: (12 - i) ** 3 * 1000 + rnd(9000) })),
     perHour: Array.from({ length: 24 }, (_, h) => Math.round((Math.sin(((h - 15) / 24) * Math.PI * 2) + 1.2) * 20) + rnd(10)),
     perWeekday: Array.from({ length: 7 }, () => 50 + rnd(150)),
-    totals: { commits: 800 + rnd(400), prs: rnd(60), reviews: rnd(30), issues: rnd(40) },
+    totals: { commits: 800 + rnd(400), prs: rnd(60), repos: 5 + rnd(15), issues: rnd(40) },
   };
 }
 
@@ -250,7 +250,7 @@ function renderRhythm({ perHour, perWeekday, totals }) {
   const tiles = [
     [fmt(totals.commits), "Commits"],
     [fmt(totals.prs), "Pull Requests"],
-    [fmt(totals.reviews), "Reviews"],
+    [fmt(totals.repos), "aktive Repositories"],
     [type, hasCommits ? `Peak ${String(peak).padStart(2, "0")}–${String((peak + 1) % 24).padStart(2, "0")} Uhr` : "Coding-Typ"],
   ];
   const tileW = (width - 72) / tiles.length;
@@ -270,7 +270,7 @@ ${bars(perHour, hourLabels, 30, chartY, 760, chartH, 3)}
 <text x="860" y="244" fill="${C.text}" font-size="19">Wochentag</text>
 ${bars(week, weekLabels, 856, chartY, 314, chartH, 1)}`;
   const height = chartY + chartH + 64;
-  const label = `Coding-Rhythmus der letzten 12 Monate: ${fmt(totals.commits)} Commits, ${fmt(totals.prs)} Pull Requests, ${fmt(totals.reviews)} Reviews; Typ: ${type}.`;
+  const label = `Coding-Rhythmus der letzten 12 Monate: ${fmt(totals.commits)} Commits, ${fmt(totals.prs)} Pull Requests, ${fmt(totals.repos)} aktive Repositories; Typ: ${type}.`;
   return frame(width, height, "/rhythm", label, body);
 }
 
