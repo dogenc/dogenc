@@ -9,7 +9,7 @@
 Ich entwickle unter **DGKN@Labs** eigene Werkzeuge, digitale Experimente und interaktive Lernwelten.  
 Mich interessiert, wie Technik funktioniert — und was sich daraus bauen lässt.
 
-[**Projektgalerie**](#aus-dem-lab) &nbsp; / &nbsp; [**Alle Projekte**](#alle-öffentlichen-projekte) &nbsp; / &nbsp; [**Tech-Stack**](#tech-stack) &nbsp; / &nbsp; [**Instagram**](https://www.instagram.com/dgkn_labs/)
+[**Projekte**](#projekte) &nbsp; / &nbsp; [**Tech-Stack**](#tech-stack) &nbsp; / &nbsp; [**Instagram**](https://www.instagram.com/dgkn_labs/)
 
 </div>
 
@@ -31,83 +31,72 @@ Mich interessiert, wie Technik funktioniert — und was sich daraus bauen lässt
 
 <br />
 
-## Aus dem Lab
-
-Sechs Einblicke in meine Projekte — mit Aufnahmen aus den jeweiligen Repositories.
+## Projekte
 
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/dogenc/SENTINEL-F"><img src="https://raw.githubusercontent.com/dogenc/SENTINEL-F/main/docs/screenshots/01-dashboard-zipbomb.png" width="100%" alt="SENTINEL-F — Screenshot aus dem Projekt" /></a>
-<h3>SENTINEL-F</h3>
-<p><strong>Dateiforensik</strong></p>
-<p>Dateien untersuchen, Auffälligkeiten verknüpfen und Analyseberichte erstellen.</p>
-<p><a href="https://github.com/dogenc/SENTINEL-F">Projekt entdecken →</a></p>
+<a href="https://github.com/dogenc/ghidraDGKN"><img src="./assets/projects/ghidradgkn.jpg" width="100%" alt="ghidraDGKN – Screenshot" /></a>
+<p><a href="https://github.com/dogenc/ghidraDGKN"><b>ghidraDGKN</b></a><br /><sub>Deutsche Forensik-Suite mit Ghidra, ClamAV &amp; YARA.</sub></p>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/dogenc/gguf-studio"><img src="https://raw.githubusercontent.com/dogenc/gguf-studio/master/docs/screenshots/main-app.png" width="100%" alt="GGUF Studio — Screenshot aus dem Projekt" /></a>
-<h3>GGUF Studio</h3>
-<p><strong>Lokale KI</strong></p>
-<p>GGUF-Modelle, Tensoren und Quantisierung erkunden; mit Ollama arbeiten.</p>
-<p><a href="https://github.com/dogenc/gguf-studio">Projekt entdecken →</a></p>
+<a href="https://github.com/dogenc/SENTINEL-F"><img src="./assets/projects/sentinel-f.jpg" width="100%" alt="SENTINEL-F – Screenshot" /></a>
+<p><a href="https://github.com/dogenc/SENTINEL-F"><b>SENTINEL-F</b></a><br /><sub>Dateien forensisch prüfen und Berichte erstellen.</sub></p>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/dogenc/dgknCryptoSuite"><img src="https://raw.githubusercontent.com/dogenc/dgknCryptoSuite/main/docs/img/dashboard.png" width="100%" alt="Crypto Suite — Screenshot aus dem Projekt" /></a>
-<h3>Crypto Suite</h3>
-<p><strong>Verschlüsselung</strong></p>
-<p>Lokale Verwaltung verschlüsselter Container unter Windows mit C++ und Qt.</p>
-<p><a href="https://github.com/dogenc/dgknCryptoSuite">Projekt entdecken →</a></p>
+<a href="https://github.com/dogenc/gguf-studio"><img src="./assets/projects/gguf-studio.jpg" width="100%" alt="GGUF Studio – Screenshot" /></a>
+<p><a href="https://github.com/dogenc/gguf-studio"><b>GGUF Studio</b></a><br /><sub>Lokale KI-Modelle, Tensoren und Quantisierung erkunden.</sub></p>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/dogenc/CORPUS-Anatomieatlas"><img src="https://raw.githubusercontent.com/dogenc/CORPUS-Anatomieatlas/main/docs/screenshots/01-uebersicht.png" width="100%" alt="CORPUS — Screenshot aus dem Projekt" /></a>
-<h3>CORPUS</h3>
-<p><strong>3D-Anatomie</strong></p>
-<p>Den menschlichen Körper erkunden: mit Schnittebenen, Lehrpfaden und Quiz.</p>
-<p><a href="https://github.com/dogenc/CORPUS-Anatomieatlas">Projekt entdecken →</a></p>
+<a href="https://github.com/dogenc/dgknCryptoSuite"><img src="./assets/projects/cryptosuite.jpg" width="100%" alt="Crypto Suite – Screenshot" /></a>
+<p><a href="https://github.com/dogenc/dgknCryptoSuite"><b>Crypto Suite</b></a><br /><sub>Verschlüsselte Container für Windows.</sub></p>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/dogenc/CELLULA"><img src="https://raw.githubusercontent.com/dogenc/CELLULA/main/docs/screenshots/gallery/02-studio.webp" width="100%" alt="CELLULA — Screenshot aus dem Projekt" /></a>
-<h3>CELLULA</h3>
-<p><strong>3D-Zellbiologie</strong></p>
-<p>Zellen, biologische Abläufe und Molekülstrukturen interaktiv verstehen.</p>
-<p><a href="https://github.com/dogenc/CELLULA">Projekt entdecken →</a></p>
+<a href="https://github.com/dogenc/DGKN-Labs-Inspector"><img src="./assets/projects/inspector.jpg" width="100%" alt="Inspector – Screenshot" /></a>
+<p><a href="https://github.com/dogenc/DGKN-Labs-Inspector"><b>Inspector</b></a><br /><sub>Wer hat ein Programm signiert – und wohin funkt es?</sub></p>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/dogenc/TERRA"><img src="https://raw.githubusercontent.com/dogenc/TERRA/main/docs/screenshots/01-planet.png" width="100%" alt="TERRA — Screenshot aus dem Projekt" /></a>
-<h3>TERRA</h3>
-<p><strong>3D-Erdatlas</strong></p>
-<p>Erdschichten, Plattentektonik und geologische Zeitreisen erkunden.</p>
-<p><a href="https://github.com/dogenc/TERRA">Projekt entdecken →</a></p>
+<a href="https://github.com/dogenc/windows-system-utility"><img src="./assets/projects/system-utility.jpg" width="100%" alt="System Utility – Screenshot" /></a>
+<p><a href="https://github.com/dogenc/windows-system-utility"><b>System Utility</b></a><br /><sub>Windows aufräumen, Entwicklerpfade finden.</sub></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/dogenc/CORPUS-Anatomieatlas"><img src="./assets/projects/corpus.jpg" width="100%" alt="CORPUS – Screenshot" /></a>
+<p><a href="https://github.com/dogenc/CORPUS-Anatomieatlas"><b>CORPUS</b></a><br /><sub>Der menschliche Körper in 3D.</sub></p>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/dogenc/CELLULA"><img src="./assets/projects/cellula.jpg" width="100%" alt="CELLULA – Screenshot" /></a>
+<p><a href="https://github.com/dogenc/CELLULA"><b>CELLULA</b></a><br /><sub>Zellen und Moleküle interaktiv verstehen.</sub></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/dogenc/TERRA"><img src="./assets/projects/terra.jpg" width="100%" alt="TERRA – Screenshot" /></a>
+<p><a href="https://github.com/dogenc/TERRA"><b>TERRA</b></a><br /><sub>Erdschichten und Plattentektonik in 3D.</sub></p>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/dogenc/3D-Globe-HTML---Test-01"><img src="./assets/projects/globe.jpg" width="100%" alt="3D Globe – Screenshot" /></a>
+<p><a href="https://github.com/dogenc/3D-Globe-HTML---Test-01"><b>3D Globe</b></a><br /><sub>Weltkarte im Intelligence-Terminal-Look.</sub></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/dogenc/bitcoin-toolbox"><img src="./assets/projects/bitcoin-toolbox.jpg" width="100%" alt="Bitcoin Toolbox – Screenshot" /></a>
+<p><a href="https://github.com/dogenc/bitcoin-toolbox"><b>Bitcoin Toolbox</b></a><br /><sub>Adressen und HD-Wallets im Browser prüfen.</sub></p>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/dogenc/passwordgenerator"><img src="./assets/projects/passwordgenerator.jpg" width="100%" alt="Passwortgenerator – Screenshot" /></a>
+<p><a href="https://github.com/dogenc/passwordgenerator"><b>Passwortgenerator</b></a><br /><sub>Sichere Passwörter samt Knackzeit.</sub></p>
 </td>
 </tr>
 </table>
 
-## Alle öffentlichen Projekte
-
-| Projekt | Bereich | Worum es geht | Repo erstellt | Erstes Release¹ |
-|---|---|---|:---:|:---:|
-| [**SENTINEL-F**](https://github.com/dogenc/SENTINEL-F) | Sicherheit & Analyse | Dateiforensik, Erkennung, Zusammenhänge und Berichte | 29.09.2026 | [29.09.2026](https://github.com/dogenc/SENTINEL-F/releases/tag/v1.0.0) |
-| [**gguf-studio**](https://github.com/dogenc/gguf-studio) | KI & Modelle | GGUF-Analyse, Tensor-Browser und Ollama-Werkzeuge | 23.07.2026 | [25.07.2026](https://github.com/dogenc/gguf-studio/releases/tag/v0.1.0) |
-| [**dgknCryptoSuite**](https://github.com/dogenc/dgknCryptoSuite) | Sicherheit & Kryptografie | Verschlüsselte Container für Windows | 07.06.2026 | [14.06.2026](https://github.com/dogenc/dgknCryptoSuite/releases/tag/7.0.0) |
-| [**CORPUS-Anatomieatlas**](https://github.com/dogenc/CORPUS-Anatomieatlas) | Wissen & 3D | Interaktiver Anatomieatlas auf Deutsch und Latein | 02.10.2026 | [04.10.2026](https://github.com/dogenc/CORPUS-Anatomieatlas/releases/tag/v1.1.0) |
-| [**CELLULA**](https://github.com/dogenc/CELLULA) | Wissen & 3D | Zellbiologie, biologische Abläufe und Moleküle | 02.10.2026 | [04.10.2026](https://github.com/dogenc/CELLULA/releases/tag/v2.1.0) |
-| [**TERRA**](https://github.com/dogenc/TERRA) | Wissen & 3D | Interaktiver Erdatlas und geologische Lernreisen | 03.10.2026 | [04.10.2026](https://github.com/dogenc/TERRA/releases/tag/v1.0.0) |
-| [**DGKN-Labs-Inspector**](https://github.com/dogenc/DGKN-Labs-Inspector) | Windows & Analyse | Programme, Signaturen und Netzwerkverbindungen untersuchen | 29.09.2026 | [29.09.2026](https://github.com/dogenc/DGKN-Labs-Inspector/releases/tag/v2.0.0) |
-| [**windows-system-utility**](https://github.com/dogenc/windows-system-utility) | Windows & Werkzeuge | Temp-Cleaner, Entwicklerpfade und Systeminformationen | 29.08.2026 | [31.08.2026](https://github.com/dogenc/windows-system-utility/releases/tag/v1.0.0) |
-| [**passwordgenerator**](https://github.com/dogenc/passwordgenerator) | Sicherheit & Werkzeuge | Passwörter erzeugen und Passwortstärke einschätzen | 09.01.2026 | [09.01.2026](https://github.com/dogenc/passwordgenerator/releases/tag/v1.0.0) |
-| [**bitcoin-toolbox**](https://github.com/dogenc/bitcoin-toolbox) | Bitcoin & Werkzeuge | Adressen, Transaktionen und HD-Wallet-Ableitungen untersuchen | 02.11.2025 | Kein Release |
-| [**3D-Globe-HTML---Test-01**](https://github.com/dogenc/3D-Globe-HTML---Test-01) | Experimente & 3D | HTML-Globus-Testprojekt | 02.04.2026 | Kein Release |
-
-
-<sub>¹ Veröffentlichungsdatum des frühesten aktuell verfügbaren GitHub-Releases; das Datum verlinkt direkt auf die Veröffentlichung. „Repo erstellt“ bezeichnet die Anlage des Repositories, nicht einen späteren Wechsel von privat zu öffentlich. Datumsangaben in Europe/Berlin.</sub>
-
-<sub>Öffentliche Repository-Übersicht · Stand: 4. Oktober 2026</sub>
-
-[**Weitere Entwicklungen auf GitHub verfolgen →**](https://github.com/dogenc?tab=repositories)
+[**Alle Repositories auf GitHub →**](https://github.com/dogenc?tab=repositories)
 
 ## Tech-Stack
 
@@ -158,6 +147,7 @@ Linux · Docker · Cloudflare · Git · GitHub
 
 | Du möchtest … | Hier starten |
 |---|---|
+| Dateien, Websites oder den PC auf Bedrohungen prüfen | [ghidraDGKN](https://github.com/dogenc/ghidraDGKN) |
 | eine Datei auf Auffälligkeiten untersuchen | [SENTINEL-F](https://github.com/dogenc/SENTINEL-F) |
 | lokale KI-Modelle besser verstehen | [GGUF Studio](https://github.com/dogenc/gguf-studio) |
 | verschlüsselte Container verwalten | [Crypto Suite](https://github.com/dogenc/dgknCryptoSuite) |
