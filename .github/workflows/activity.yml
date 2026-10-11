@@ -1,0 +1,46 @@
+name: Coding-Aktivität
+
+on:
+  schedule:
+    - cron: "17 */3 * * *" # alle 3 Stunden
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/scripts/activity.mjs
+      - .github/workflows/activity.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: activity
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Aktivitätsgrafik erzeugen
+        env:
+          # Persönlicher Token (classic, Scopes: repo + read:user) – nur so zählen private Repos mit.
+          ACTIVITY_TOKEN: ${{ secrets.ACTIVITY_TOKEN }}
+        run: node .github/scripts/activity.mjs assets/activity.svg
+
+      - name: Nur bei Änderungen committen
+        run: |
+          if git diff --quiet -- assets/activity.svg; then
+            echo "Keine Änderungen."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add assets/activity.svg
+          git commit -m "chore(profile): Coding-Aktivität aktualisieren"
+          git push

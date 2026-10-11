@@ -19,6 +19,14 @@ Mich interessiert, wie Technik funktioniert — und was sich daraus bauen lässt
 
 <br />
 
+## Coding-Aktivität
+
+<img src="./assets/activity.svg" width="100%" alt="Coding-Aktivität der letzten 12 Monate aus öffentlichen und privaten Repositories – wird automatisch aktualisiert." />
+
+<sub>Automatisch alle 3 Stunden aktualisiert · zählt auch private Repositories (nur Anzahl pro Tag, keine Namen oder Inhalte).</sub>
+
+<br />
+
 ## Aus dem Lab
 
 Sechs Einblicke in meine Projekte — mit Aufnahmen aus den jeweiligen Repositories.
