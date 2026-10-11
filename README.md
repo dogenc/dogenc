@@ -80,19 +80,26 @@ Mich interessiert, wie Technik funktioniert — und was sich daraus bauen lässt
 <p><a href="https://github.com/dogenc/TERRA"><b>TERRA</b></a><br /><sub>Erdschichten und Plattentektonik in 3D.</sub></p>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/dogenc/3D-Globe-HTML---Test-01"><img src="./assets/projects/globe.jpg" width="100%" alt="3D Globe – Screenshot" /></a>
-<p><a href="https://github.com/dogenc/3D-Globe-HTML---Test-01"><b>3D Globe</b></a><br /><sub>Weltkarte im Intelligence-Terminal-Look.</sub></p>
+<a href="https://github.com/dogenc/ELEMENTA"><img src="./assets/projects/elementa.jpg" width="100%" alt="ELEMENTA – Screenshot" /></a>
+<p><a href="https://github.com/dogenc/ELEMENTA"><b>ELEMENTA</b></a><br /><sub>Alle 118 Elemente, Orbitale und Moleküle in 3D.</sub></p>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
+<a href="https://github.com/dogenc/3D-Globe-HTML---Test-01"><img src="./assets/projects/globe.jpg" width="100%" alt="3D Globe – Screenshot" /></a>
+<p><a href="https://github.com/dogenc/3D-Globe-HTML---Test-01"><b>3D Globe</b></a><br /><sub>Weltkarte im Intelligence-Terminal-Look.</sub></p>
+</td>
+<td width="50%" valign="top">
 <a href="https://github.com/dogenc/bitcoin-toolbox"><img src="./assets/projects/bitcoin-toolbox.jpg" width="100%" alt="Bitcoin Toolbox – Screenshot" /></a>
 <p><a href="https://github.com/dogenc/bitcoin-toolbox"><b>Bitcoin Toolbox</b></a><br /><sub>Adressen und HD-Wallets im Browser prüfen.</sub></p>
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 <a href="https://github.com/dogenc/passwordgenerator"><img src="./assets/projects/passwordgenerator.jpg" width="100%" alt="Passwortgenerator – Screenshot" /></a>
 <p><a href="https://github.com/dogenc/passwordgenerator"><b>Passwortgenerator</b></a><br /><sub>Sichere Passwörter samt Knackzeit.</sub></p>
 </td>
+<td width="50%"></td>
 </tr>
 </table>
 
@@ -151,7 +158,7 @@ Linux · Docker · Cloudflare · Git · GitHub
 | eine Datei auf Auffälligkeiten untersuchen | [SENTINEL-F](https://github.com/dogenc/SENTINEL-F) |
 | lokale KI-Modelle besser verstehen | [GGUF Studio](https://github.com/dogenc/gguf-studio) |
 | verschlüsselte Container verwalten | [Crypto Suite](https://github.com/dogenc/dgknCryptoSuite) |
-| Körper, Zellen oder Erde in 3D erkunden | [CORPUS](https://github.com/dogenc/CORPUS-Anatomieatlas) · [CELLULA](https://github.com/dogenc/CELLULA) · [TERRA](https://github.com/dogenc/TERRA) |
+| Körper, Zellen, Erde oder Chemie in 3D erkunden | [CORPUS](https://github.com/dogenc/CORPUS-Anatomieatlas) · [CELLULA](https://github.com/dogenc/CELLULA) · [TERRA](https://github.com/dogenc/TERRA) · [ELEMENTA](https://github.com/dogenc/ELEMENTA) |
 | Windows-Programme und Verbindungen prüfen | [Inspector](https://github.com/dogenc/DGKN-Labs-Inspector) |
 | Windows aufräumen oder Entwicklerpfade finden | [System Utility](https://github.com/dogenc/windows-system-utility) |
 
