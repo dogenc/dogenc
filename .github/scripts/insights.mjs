@@ -87,7 +87,7 @@ async function fetchData() {
             defaultBranchRef { target { ... on Commit {
               history(first: 100, after: $after, since: $since) {
                 pageInfo { hasNextPage endCursor }
-                nodes { oid authoredDate messageHeadline author { name user { login } } }
+                nodes { oid authoredDate messageHeadline parents { totalCount } author { name user { login } } }
               }
             } } }
           }
@@ -133,16 +133,17 @@ async function fetchData() {
     } while (prAfter);
   }
 
-  // Squash-/Merge-Commits ersetzen durch die Einzelcommits aus den PRs (ohne Doppelte).
+  // Squash-Commits (ein Elternteil) durch die Einzelcommits aus den PRs ersetzen (ohne Doppelte).
+  // Normale Merge-Commits bleiben stehen – sie zählen auch bei GitHub.
   const mainKeys = new Set(mainCommits.map(key));
-  const removed = mainCommits.filter((n) => mergeOids.has(n.oid) && !prCommits.has(key(n)));
+  const removed = mainCommits.filter((n) => mergeOids.has(n.oid) && n.parents.totalCount === 1 && !prCommits.has(key(n)));
   const added = [...prCommits.values()].filter((n) => !mainKeys.has(key(n)));
   const commitTimes = [
     ...mainCommits.filter((n) => !removed.includes(n)).map((n) => n.authoredDate),
     ...added.map((n) => n.authoredDate),
   ];
   console.log(
-    `Commits: ${commitTimes.length} (Branch ${mainCommits.length}, aus PRs ergänzt ${added.length}, Squash/Merge entfernt ${removed.length}, Bots ignoriert ${skippedBots})`,
+    `Commits: ${commitTimes.length} (Branch ${mainCommits.length}, aus PRs ergänzt ${added.length}, Squash ersetzt ${removed.length}, Bots ignoriert ${skippedBots})`,
   );
 
   // Tagesweise Korrektur für die Heatmap (activity.mjs liest sie über ACTIVITY_EXTRA).
