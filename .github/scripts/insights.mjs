@@ -114,7 +114,7 @@ async function fetchData() {
   const perWeekday = Array(7).fill(0);
   for (const w of cc.contributionCalendar.weeks) for (const d of w.contributionDays) perWeekday[d.weekday] += d.contributionCount;
 
-  const hourFmt = new Intl.DateTimeFormat("de-DE", { hour: "numeric", hourCycle: "h23", timeZone: TZ });
+  const hourFmt = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", hourCycle: "h23", timeZone: TZ });
   const perHour = Array(24).fill(0);
   for (const t of commitTimes) perHour[Number(hourFmt.format(new Date(t)))]++;
 
