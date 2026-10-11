@@ -23,7 +23,11 @@ Mich interessiert, wie Technik funktioniert — und was sich daraus bauen lässt
 
 <img src="./assets/activity.svg" width="100%" alt="Coding-Aktivität der letzten 12 Monate aus öffentlichen und privaten Repositories – wird automatisch aktualisiert." />
 
-<sub>Automatisch alle 3 Stunden aktualisiert · zählt auch private Repositories (nur Anzahl pro Tag, keine Namen oder Inhalte).</sub>
+<img src="./assets/rhythm.svg" width="100%" alt="Coding-Rhythmus der letzten 12 Monate: Commits, Pull Requests, Reviews sowie Verteilung nach Tageszeit und Wochentag – inklusive privater Repositories." />
+
+<img src="./assets/languages.svg" width="100%" alt="Anteile der Programmiersprachen über alle eigenen öffentlichen und privaten Repositories." />
+
+<sub>Automatisch alle 3 Stunden aktualisiert · zählt auch private Repositories (nur Summen, keine Namen oder Inhalte).</sub>
 
 <br />
 

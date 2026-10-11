@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - .github/scripts/activity.mjs
+      - .github/scripts/insights.mjs
       - .github/workflows/activity.yml
 
 permissions:
@@ -33,14 +34,21 @@ jobs:
           ACTIVITY_TOKEN: ${{ secrets.ACTIVITY_TOKEN }}
         run: node .github/scripts/activity.mjs assets/activity.svg
 
+      - name: Sprachen und Rhythmus erzeugen
+        # Ein Fehler hier soll die Heatmap nicht blockieren.
+        continue-on-error: true
+        env:
+          ACTIVITY_TOKEN: ${{ secrets.ACTIVITY_TOKEN }}
+        run: node .github/scripts/insights.mjs assets
+
       - name: Nur bei Änderungen committen
         run: |
-          if git diff --quiet -- assets/activity.svg; then
+          if git diff --quiet -- assets/activity.svg assets/languages.svg assets/rhythm.svg; then
             echo "Keine Änderungen."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add assets/activity.svg
+          git add assets/activity.svg assets/languages.svg assets/rhythm.svg
           git commit -m "chore(profile): Coding-Aktivität aktualisieren"
           git push
