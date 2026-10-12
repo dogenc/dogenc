@@ -35,6 +35,13 @@ Mich interessiert, wie Technik funktioniert — und was sich daraus bauen lässt
 
 <table>
 <tr>
+<td colspan="2" valign="top">
+<a href="https://github.com/dogenc/ASTRA"><img src="https://raw.githubusercontent.com/dogenc/ASTRA/main/docs/gallery/01-sonnensystem.webp" width="100%" alt="ASTRA – echte App-Ansicht des Sonnensystems mit Planeten und Umlaufbahnen" /></a>
+<p><a href="https://github.com/dogenc/ASTRA"><b>ASTRA · Weltraum-Atlas</b></a><br /><sub>Das Universum interaktiv verstehen: 11 Himmelskörper in 3D, 5.080 Sterne, 88 Sternbilder und vier animierte Phänomene.</sub></p>
+<p><sub>Atlas 05 · Deutsch · Browser, Windows &amp; macOS · Offline nutzbar · <a href="https://github.com/dogenc/ASTRA/releases/latest">Downloads</a></sub><br /><sub>Planetentexturen: Solar System Scope · CC BY 4.0</sub></p>
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 <a href="https://github.com/dogenc/SENTINEL-F"><img src="./assets/projects/sentinel-f.jpg" width="100%" alt="SENTINEL-F – Screenshot" /></a>
 <p><a href="https://github.com/dogenc/SENTINEL-F"><b>SENTINEL-F</b></a><br /><sub>Dateien forensisch prüfen und Berichte erstellen.</sub></p>
@@ -150,7 +157,7 @@ Linux · Docker · Cloudflare · Git · GitHub
 | eine Datei auf Auffälligkeiten untersuchen | [SENTINEL-F](https://github.com/dogenc/SENTINEL-F) |
 | lokale KI-Modelle besser verstehen | [GGUF Studio](https://github.com/dogenc/gguf-studio) |
 | verschlüsselte Container verwalten | [Crypto Suite](https://github.com/dogenc/dgknCryptoSuite) |
-| Körper, Zellen, Erde oder Chemie in 3D erkunden | [CORPUS](https://github.com/dogenc/CORPUS-Anatomieatlas) · [CELLULA](https://github.com/dogenc/CELLULA) · [TERRA](https://github.com/dogenc/TERRA) · [ELEMENTA](https://github.com/dogenc/ELEMENTA) |
+| Körper, Zellen, Erde, Chemie oder das All in 3D erkunden | [CORPUS](https://github.com/dogenc/CORPUS-Anatomieatlas) · [CELLULA](https://github.com/dogenc/CELLULA) · [TERRA](https://github.com/dogenc/TERRA) · [ELEMENTA](https://github.com/dogenc/ELEMENTA) · [ASTRA](https://github.com/dogenc/ASTRA) |
 | Windows-Programme und Verbindungen prüfen | [Inspector](https://github.com/dogenc/DGKN-Labs-Inspector) |
 | Windows aufräumen oder Entwicklerpfade finden | [System Utility](https://github.com/dogenc/windows-system-utility) |
 
