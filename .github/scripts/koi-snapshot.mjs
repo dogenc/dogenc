@@ -8,7 +8,7 @@
 //
 //   ACTIVITY_TOKEN=<PAT> node .github/scripts/koi-snapshot.mjs ausgabe.json
 
-import { writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 
 const LOGIN = process.env.ACTIVITY_LOGIN || "dogenc";
 const out = process.argv[2];
@@ -80,6 +80,14 @@ for (let start = createdOn; start <= lastDay; ) {
     for (const d of w.contributionDays)
       if (d.date >= start && d.date <= end) counts.set(d.date, d.contributionCount);
   start = addDays(end, 1);
+}
+
+// Wie bei der Aktivitäts-Grafik: Einzelcommits aus squash-gemergten PRs ergänzen
+// (GitHub zählt einen Squash-Merge nur als einen Beitrag). Die Datei erzeugt insights.mjs.
+if (process.env.ACTIVITY_EXTRA && existsSync(process.env.ACTIVITY_EXTRA)) {
+  const extra = JSON.parse(readFileSync(process.env.ACTIVITY_EXTRA, "utf8"));
+  for (const [date, n] of Object.entries(extra))
+    if (counts.has(date)) counts.set(date, Math.max(0, counts.get(date) + n));
 }
 
 // git-koi verlangt jeden Tag lückenlos; fehlende Tage (selten) zählen als 0.

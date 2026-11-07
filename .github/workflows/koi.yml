@@ -49,6 +49,10 @@ jobs:
           snapshot="$RUNNER_TEMP/koi-snapshot.json"
           scope=public
           full="$RUNNER_TEMP/koi-full.json"
+          # Squash-Korrektur wie bei der Aktivitäts-Grafik (Grafiken landen nur im Runner).
+          export ACTIVITY_EXTRA="$RUNNER_TEMP/extra-commits.json"
+          mkdir -p "$RUNNER_TEMP/insights"
+          node .github/scripts/insights.mjs "$RUNNER_TEMP/insights" || echo "::warning::Squash-Korrektur nicht verfügbar."
           if [ -n "$ACTIVITY_TOKEN" ] && node .github/scripts/koi-snapshot.mjs "$full" \
              && git-koi render "$full" --output-dir "$RUNNER_TEMP/koi-full" --body gold > "$RUNNER_TEMP/caption.txt"; then
             cp "$RUNNER_TEMP/koi-full/koi.gif" koi/koi.gif
