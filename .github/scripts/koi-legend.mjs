@@ -10,6 +10,8 @@ const [snapshotPath, outPath = "assets/koi-legend.svg"] = process.argv.slice(2);
 if (!snapshotPath) throw new Error("Pfad zum git-koi-Schnappschuss fehlt.");
 const snap = JSON.parse(readFileSync(snapshotPath, "utf8"));
 const caption = process.env.KOI_CAPTION || "";
+// "all": Schnappschuss mit privaten Repositories und Beiträgen (koi-snapshot.mjs), sonst nur öffentlich.
+const allData = process.env.KOI_SCOPE === "all";
 
 // ---------------------------------------------------------------- Werte wie in git-koi
 const FULL_COLOR = 500, YOUNG_SHAPE = 1_500, ADULT = 12_750, MAX_GROWTH = 100_000;
@@ -141,7 +143,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" 
 <rect x="${X0}" y="90" width="${W - X0 - 56}" height="1" fill="url(#rule)"/>
 
 ${label(140, "GRÖSSE")}
-${value(140, esc(stage.name), `<tspan ${sans} font-size="19" font-weight="400" fill="${C.gold}" dx="12">${de(total)} Beiträge</tspan>`)}
+${value(140, esc(stage.name), `<tspan ${sans} font-size="19" font-weight="400" fill="${C.gold}" dx="12">${de(total)} Beiträge${allData ? " · inkl. privater" : ""}</tspan>`)}
 <rect x="${XV}" y="156" width="${BAR}" height="6" rx="3" fill="${C.track}"/>
 <rect x="${XV}" y="156" width="${(BAR * growth).toFixed(1)}" height="6" rx="3" fill="url(#bar)"/>
 <circle cx="${(XV + BAR * growth).toFixed(1)}" cy="159" r="6" fill="${C.light}"/>
@@ -149,7 +151,7 @@ ${note(188, `${pct(growth)} der Maximalgröße · ${stage.note ? esc(stage.note)
 
 ${label(248, "FARBEN")}
 ${langRow || value(248, "–")}
-${note(280, `Hauptsprachen meiner öffentlichen Repos · Farbintensität: ${colorWord}${glimmer > 0 ? " mit Glitzer" : ""}`)}
+${note(280, `Hauptsprachen ${allData ? "aller meiner Repos, auch privater" : "meiner öffentlichen Repos"} · Farbintensität: ${colorWord}${glimmer > 0 ? " mit Glitzer" : ""}`)}
 
 ${label(346, "SERIEN")}
 ${value(346, `Längste ${longest} Wo.`, `<tspan ${sans} font-size="19" font-weight="400" fill="${C.gold}" dx="12">${esc(streakNow)}</tspan>`)}

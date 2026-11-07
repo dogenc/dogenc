@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [.github/workflows/koi.yml, .github/scripts/koi-legend.mjs]
+    paths: [.github/workflows/koi.yml, .github/scripts/koi-legend.mjs, .github/scripts/koi-snapshot.mjs]
 
 permissions:
   contents: write
@@ -37,16 +37,30 @@ jobs:
         with:
           node-version: 22
 
-      # git-koi legt seinen Schnappschuss in RUNNER_TEMP ab; daraus entsteht die Legende.
-      # Ein Fehler hier darf den Koi selbst nicht aufhalten.
-      - name: Legende erzeugen
+      # Das Action-Ergebnis oben nutzt nur öffentliche Daten. Mit dem eigenen ACTIVITY_TOKEN
+      # wird der Koi aus ALLEN Beiträgen und Repositories (auch privaten) neu gezeichnet.
+      # Klappt das nicht, bleibt der öffentliche Koi stehen. Ein Fehler hier darf ihn nicht aufhalten.
+      - name: Koi aus allen Beiträgen zeichnen und Legende erzeugen
         continue-on-error: true
         shell: bash
+        env:
+          ACTIVITY_TOKEN: ${{ secrets.ACTIVITY_TOKEN }}
         run: |
           snapshot="$RUNNER_TEMP/koi-snapshot.json"
-          caption=$(git-koi render "$snapshot" --output-dir "$RUNNER_TEMP/koi-check" --body gold)
-          echo "$caption"
-          KOI_CAPTION="$caption" node .github/scripts/koi-legend.mjs "$snapshot" assets/koi-legend.svg
+          scope=public
+          full="$RUNNER_TEMP/koi-full.json"
+          if [ -n "$ACTIVITY_TOKEN" ] && node .github/scripts/koi-snapshot.mjs "$full" \
+             && git-koi render "$full" --output-dir "$RUNNER_TEMP/koi-full" --body gold > "$RUNNER_TEMP/caption.txt"; then
+            cp "$RUNNER_TEMP/koi-full/koi.gif" koi/koi.gif
+            snapshot="$full"
+            scope=all
+          else
+            echo "::warning::Vollständige Daten nicht verfügbar – öffentlicher Koi bleibt."
+            git-koi render "$snapshot" --output-dir "$RUNNER_TEMP/koi-check" --body gold > "$RUNNER_TEMP/caption.txt"
+          fi
+          cat "$RUNNER_TEMP/caption.txt"
+          KOI_CAPTION="$(cat "$RUNNER_TEMP/caption.txt")" KOI_SCOPE="$scope" \
+            node .github/scripts/koi-legend.mjs "$snapshot" assets/koi-legend.svg
 
       - name: Nur bei Änderungen committen
         shell: bash
