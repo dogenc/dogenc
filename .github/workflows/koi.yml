@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [.github/workflows/koi.yml]
+    paths: [.github/workflows/koi.yml, .github/scripts/koi-legend.mjs]
 
 permissions:
   contents: write
@@ -33,10 +33,25 @@ jobs:
           body: gold
           output-dir: koi
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # git-koi legt seinen Schnappschuss in RUNNER_TEMP ab; daraus entsteht die Legende.
+      # Ein Fehler hier darf den Koi selbst nicht aufhalten.
+      - name: Legende erzeugen
+        continue-on-error: true
+        shell: bash
+        run: |
+          snapshot="$RUNNER_TEMP/koi-snapshot.json"
+          caption=$(git-koi render "$snapshot" --output-dir "$RUNNER_TEMP/koi-check" --body gold)
+          echo "$caption"
+          KOI_CAPTION="$caption" node .github/scripts/koi-legend.mjs "$snapshot" assets/koi-legend.svg
+
       - name: Nur bei Änderungen committen
         shell: bash
         run: |
-          git add koi/koi.gif
+          git add koi/koi.gif assets/koi-legend.svg 2>/dev/null || git add koi/koi.gif
           if git diff --cached --quiet; then
             echo "Der Koi ist unverändert."
             exit 0
