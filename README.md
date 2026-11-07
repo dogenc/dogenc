@@ -36,6 +36,7 @@ Mich interessiert, wie Technik funktioniert — und was sich daraus bauen lässt
 <div align="center">
 
 <img src="./koi/koi.gif" width="256" alt="Mein Code-Koi: ein goldener Pixel-Koi, der jede Nacht aus meiner öffentlichen GitHub-Aktivität neu gezeichnet wird." />
+<img src="./assets/koi-legend.svg" width="520" alt="Legende zum Code-Koi: Wachstumsstufe und Beiträge, Farben nach Programmiersprachen, Wochen-Serien und heutiges Schwimmverhalten – jede Nacht aktualisiert." />
 
 <sub>Sprachen färben ihn, Beiträge lassen ihn wachsen, der letzte Tag bestimmt, wie er schwimmt.<br />Jede Nacht neu gezeichnet mit <a href="https://github.com/yalongwastaken/git-koi">git-koi</a>.</sub>
 

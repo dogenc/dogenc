@@ -117,7 +117,7 @@ const streakNow = endedOn ? (finStrength > 0 ? `zuletzt ${recentLen} Wo., verbla
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="t d">
 <title id="t">Legende zum Code-Koi</title>
-<desc id="d">Größe: ${esc(stage.name)}, ${de(total)} Beiträge, ${pct(growth)} der Maximalgröße. Farben: ${esc(languages.map((l) => `${l.name} ${pct(l.share)}`).join(", ") || "keine")}. Längste Serie ${longest} Wochen, ${esc(streakNow)}. Heute: ${esc(behaviorName)}. Stand ${dateDe}.</desc>
+<desc id="d">Größe: ${esc(stage.name)}, ${de(total)} Beiträge, ${pct(growth)} der Maximalgröße. Farben: ${esc(languages.map((l) => `${l.name} ${pct(l.share)}`).join(", ") || "keine")}. Längste Serie ${longest} Wochen, ${esc(streakNow.replace(/\.$/, ""))}. Heute: ${esc(behaviorName)}. Stand ${dateDe}.</desc>
 <defs>
   <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".09"/><stop offset=".45" stop-color="#ffffff" stop-opacity=".025"/><stop offset="1" stop-color="#ffffff" stop-opacity=".05"/></linearGradient>
   <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${C.light}" stop-opacity=".9"/><stop offset=".35" stop-color="${C.gold}" stop-opacity=".35"/><stop offset=".7" stop-color="${C.gold}" stop-opacity=".12"/><stop offset="1" stop-color="${C.light}" stop-opacity=".55"/></linearGradient>
