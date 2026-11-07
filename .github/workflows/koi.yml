@@ -1,0 +1,52 @@
+name: Code-Koi
+
+# Zeichnet jede Nacht einen Pixel-Koi aus der öffentlichen GitHub-Aktivität
+# (https://github.com/yalongwastaken/git-koi): Sprachen färben ihn, Beiträge lassen
+# ihn wachsen, Serien zeichnen ihn, der vergangene Tag bestimmt, wie er schwimmt.
+
+on:
+  schedule:
+    # Kurz nach Mitternacht UTC: der Koi zeigt den Tag, der gerade endete.
+    # Bewusst nicht zur selben Minute wie die Coding-Aktivität (:17).
+    - cron: "41 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/koi.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: koi
+  cancel-in-progress: false
+
+jobs:
+  koi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Fest auf Release v1.0.2 gepinnt, damit spätere Änderungen das Profil nicht brechen.
+      - uses: yalongwastaken/git-koi@7305e9b1fadee6f43d3b4fa543a25d4cde79856e # v1.0.2
+        with:
+          body: gold
+          output-dir: koi
+
+      - name: Nur bei Änderungen committen
+        shell: bash
+        run: |
+          git add koi/koi.gif
+          if git diff --cached --quiet; then
+            echo "Der Koi ist unverändert."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --quiet --message "chore(profile): Code-Koi neu zeichnen"
+          # Die Aktivitäts-Grafik committet ebenfalls; vor dem Push den neuesten Stand holen.
+          for attempt in 1 2 3; do
+            git pull --quiet --rebase origin main && git push --quiet && exit 0
+            sleep $((attempt * 10))
+          done
+          exit 1
