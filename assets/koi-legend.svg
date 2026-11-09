@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1040" height="512" viewBox="0 0 1040 512" role="img" aria-labelledby="t d">
 <title id="t">Legende zum Code-Koi</title>
-<desc id="d">Größe: Heranwachsend, 886 Beiträge, 39 % der Maximalgröße. Farben: JavaScript 36 %, Python 28 %, HTML 11 %, TypeScript 8 %, C# 6 %, C++ 6 %, PowerShell 3 %, Rust 3 %. Längste Serie 8 Wochen, aktuell 8 Wo. Heute: Gleitet ruhig. Stand 07.11.2026.</desc>
+<desc id="d">Größe: Heranwachsend, 914 Beiträge, 39 % der Maximalgröße. Farben: JavaScript 36 %, Python 28 %, HTML 11 %, TypeScript 8 %, C# 6 %, C++ 6 %, PowerShell 3 %, Rust 3 %. Längste Serie 8 Wochen, aktuell 8 Wo. Heute: Gleitet ruhig. Stand 08.11.2026.</desc>
 <defs>
   <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".09"/><stop offset=".45" stop-color="#ffffff" stop-opacity=".025"/><stop offset="1" stop-color="#ffffff" stop-opacity=".05"/></linearGradient>
   <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4d997" stop-opacity=".9"/><stop offset=".35" stop-color="#d9b66d" stop-opacity=".35"/><stop offset=".7" stop-color="#d9b66d" stop-opacity=".12"/><stop offset="1" stop-color="#f4d997" stop-opacity=".55"/></linearGradient>
@@ -20,14 +20,14 @@
 <rect x="2" y="2" width="1036" height="508" rx="30" fill="none" stroke="url(#edge)" stroke-width="2"/>
 
 <text x="52" y="66" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" letter-spacing="5" fill="#f4d997">CODE-KOI · LEGENDE</text>
-<text x="984" y="66" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#8b98a9" text-anchor="end">Stand 07.11.2026</text>
+<text x="984" y="66" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#8b98a9" text-anchor="end">Stand 08.11.2026</text>
 <rect x="52" y="90" width="932" height="1" fill="url(#rule)"/>
 
 <text x="52" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" letter-spacing="3" fill="#d9b66d" fill-opacity=".8">GRÖSSE</text>
-<text x="236" y="140" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="25" font-weight="600" fill="#eef1f5">Heranwachsend<tspan font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" font-weight="400" fill="#d9b66d" dx="12">886 Beiträge · inkl. privater</tspan></text>
+<text x="236" y="140" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="25" font-weight="600" fill="#eef1f5">Heranwachsend<tspan font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" font-weight="400" fill="#d9b66d" dx="12">914 Beiträge · inkl. privater</tspan></text>
 <rect x="236" y="156" width="748" height="6" rx="3" fill="#ffffff14"/>
-<rect x="236" y="156" width="288.3" height="6" rx="3" fill="url(#bar)"/>
-<circle cx="524.3" cy="159" r="6" fill="#f4d997"/>
+<rect x="236" y="156" width="291.2" height="6" rx="3" fill="url(#bar)"/>
+<circle cx="527.2" cy="159" r="6" fill="#f4d997"/>
 <text x="236" y="188" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#8b98a9">39 % der Maximalgröße · Kopf und Flossen formen sich · nächste Stufe bei 1.500</text>
 
 <text x="52" y="248" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" letter-spacing="3" fill="#d9b66d" fill-opacity=".8">FARBEN</text>
