@@ -67,7 +67,7 @@ Mich interessiert, wie Technik funktioniert — und was sich daraus bauen lässt
 <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/dogenc/dgknCryptoSuite"><img src="./assets/projects/cryptosuite.jpg" width="100%" alt="Crypto Suite – Screenshot" /></a>
-<p><a href="https://github.com/dogenc/dgknCryptoSuite"><b>Crypto Suite</b></a><br /><sub>Verschlüsselte Container für Windows.</sub></p>
+<p><a href="https://github.com/dogenc/dgknCryptoSuite"><b>Crypto Suite</b></a><br /><sub>Dateien und Container verschlüsseln – mit Terminal-Oberfläche.</sub></p>
 </td>
 <td width="50%" valign="top">
 <a href="https://github.com/dogenc/DGKN-Labs-Inspector"><img src="./assets/projects/inspector.jpg" width="100%" alt="Inspector – Screenshot" /></a>
@@ -169,7 +169,7 @@ Linux · Docker · Cloudflare · Git · GitHub
 |---|---|
 | eine Datei auf Auffälligkeiten untersuchen | [SENTINEL-F](https://github.com/dogenc/SENTINEL-F) |
 | lokale KI-Modelle besser verstehen | [GGUF Studio](https://github.com/dogenc/gguf-studio) |
-| verschlüsselte Container verwalten | [Crypto Suite](https://github.com/dogenc/dgknCryptoSuite) |
+| Dateien und Container verschlüsseln | [Crypto Suite](https://github.com/dogenc/dgknCryptoSuite) |
 | Körper, Zellen, Erde, Chemie oder das All in 3D erkunden | [CORPUS](https://github.com/dogenc/CORPUS-Anatomieatlas) · [CELLULA](https://github.com/dogenc/CELLULA) · [TERRA](https://github.com/dogenc/TERRA) · [ELEMENTA](https://github.com/dogenc/ELEMENTA) · [ASTRA](https://github.com/dogenc/ASTRA) |
 | Windows-Programme und Verbindungen prüfen | [Inspector](https://github.com/dogenc/DGKN-Labs-Inspector) |
 | Windows aufräumen oder Entwicklerpfade finden | [System Utility](https://github.com/dogenc/windows-system-utility) |
