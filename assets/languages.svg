@@ -4,7 +4,7 @@
 <g font-family="monospace">
 <text x="99" y="31" fill="#76879b" font-size="13">dogenc@labs ~ /languages</text>
 <text x="36" y="96" fill="#d9b66d" font-size="22">$ du --languages ~/repos</text>
-<text x="1164" y="96" fill="#76879b" font-size="18" text-anchor="end">41 Repositories · Stand 24.11.2026</text>
+<text x="1164" y="96" fill="#76879b" font-size="18" text-anchor="end">42 Repositories · Stand 25.11.2026</text>
 <clipPath id="bar"><rect x="36" y="128" width="1128" height="26" rx="13"/></clipPath>
 <rect x="36" y="128" width="1128" height="26" rx="13" fill="#161d27"/>
 <g clip-path="url(#bar)"><rect x="36.0" y="128" width="425.4" height="26" fill="#f1e05a"><title>JavaScript: 38.0 %</title></rect><rect x="464.4" y="128" width="276.1" height="26" fill="#3572A5"><title>Python: 24.7 %</title></rect><rect x="743.5" y="128" width="177.4" height="26" fill="#3178c6"><title>TypeScript: 16.0 %</title></rect><rect x="923.9" y="128" width="61.0" height="26" fill="#e34c26"><title>HTML: 5.7 %</title></rect><rect x="987.9" y="128" width="49.4" height="26" fill="#f34b7d"><title>C++: 4.6 %</title></rect><rect x="1040.3" y="128" width="43.8" height="26" fill="#7355dd"><title>C#: 4.1 %</title></rect><rect x="1087.1" y="128" width="32.7" height="26" fill="#663399"><title>CSS: 3.2 %</title></rect><rect x="1122.8" y="128" width="13.6" height="26" fill="#012456"><title>PowerShell: 1.5 %</title></rect><rect x="1139.3" y="128" width="21.7" height="26" fill="#3d4a5c"><title>Sonstige: 2.2 %</title></rect></g>
